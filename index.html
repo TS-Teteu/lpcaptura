@@ -175,8 +175,8 @@
             color: #ffffff;
             /* White text for card */
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            /* Responsive font size - reduced max size for mobile */
-            font-size: clamp(28px, 6vw, 40px);
+            /* Responsive font size - reduced further for 2-line target */
+            font-size: clamp(24px, 5vw, 36px);
         }
 
         .subtitle {
@@ -268,17 +268,18 @@
         }
 
         .cta-primary {
-            padding: 16px 32px;
-            /* Slightly reduced padding for mobile */
+            padding: 14px 28px;
+            /* Slightly reduced padding */
             width: 100%;
-            max-width: 350px;
-            /* Fix mobile overflow */
+            max-width: 320px;
+            /* Reduced max-width to look smaller than title */
             /* Removed fixed min-width: 500px */
             background: linear-gradient(180deg, #4ade80 0%, #22c55e 100%);
             color: #ffffff;
             border: none;
             border-radius: 50px;
-            font-size: 24px;
+            font-size: 18px;
+            /* Reduced from 24px */
             /* Increased font size */
             justify-content: center;
             font-weight: 700;
@@ -346,8 +347,9 @@
         }
 
         .avatar {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            /* Reduced from 32px */
+            height: 28px;
             border-radius: 50%;
             border: 2px solid #ffffff;
             margin-left: -10px;
@@ -365,18 +367,19 @@
 
         .social-text {
             text-align: left;
-            font-size: 13px;
-            /* Slightly smaller for better fit */
+            font-size: 11px;
+            /* Significantly reduced to fit single line */
             color: rgba(255, 255, 255, 0.9);
             /* Light text */
             line-height: 1.2;
-            /* Tighter line height */
-            white-space: nowrap;
-            /* Try to keep on one line if possible, or let it break naturally? User image shows 2 lines. let's allow break but controlled */
             white-space: normal;
         }
 
         .social-text strong {
+            display: block;
+            /* Force own line */
+            white-space: nowrap;
+            /* Force single line for bold part */
             color: #ffffff;
             font-weight: 600;
         }
