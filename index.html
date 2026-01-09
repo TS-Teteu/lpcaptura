@@ -142,8 +142,8 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             /* Mobile fixes */
-            padding: 380px 20px 40px;
-            /* Reduced top padding slightly for better fit */
+            padding: 420px 20px 30px;
+            /* Increased top padding to push content down, reduced bottom */
         }
 
         /* Noise Overlay Removed for clean white look */
@@ -175,8 +175,8 @@
             color: #ffffff;
             /* White text for card */
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            /* Responsive font size */
-            font-size: clamp(32px, 8vw, 48px);
+            /* Responsive font size - reduced max size for mobile */
+            font-size: clamp(28px, 6vw, 40px);
         }
 
         .subtitle {
@@ -316,16 +316,15 @@
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            gap: 15px;
-            /* Note: duplicate gap in original, keeping it dirty or cleaning it up? I'll clean it */
             margin-top: 20px;
             /* Reduced space from button */
-            padding: 8px 16px;
+            padding: 6px 16px;
             /* Tighter padding */
             /* Reduced vertical padding */
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.6);
+            /* Darker background for contrast, but cleaner */
             /* Glassmorphism light */
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50px;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
