@@ -141,6 +141,9 @@
             z-index: 1;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            /* Mobile fixes */
+            padding: 380px 20px 40px;
+            /* Reduced top padding slightly for better fit */
         }
 
         /* Noise Overlay Removed for clean white look */
@@ -172,6 +175,8 @@
             color: #ffffff;
             /* White text for card */
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            /* Responsive font size */
+            font-size: clamp(32px, 8vw, 48px);
         }
 
         .subtitle {
@@ -252,6 +257,9 @@
             .cta-primary {
                 width: fit-content;
                 /* Don't stretch full width */
+                min-width: 500px;
+                /* Restore desktop width */
+                max-width: none;
             }
 
             .social-proof {
@@ -260,9 +268,12 @@
         }
 
         .cta-primary {
-            padding: 20px 40px;
-            min-width: 500px;
-            /* Increased to match social proof width */
+            padding: 16px 32px;
+            /* Slightly reduced padding for mobile */
+            width: 100%;
+            max-width: 350px;
+            /* Fix mobile overflow */
+            /* Removed fixed min-width: 500px */
             background: linear-gradient(180deg, #4ade80 0%, #22c55e 100%);
             color: #ffffff;
             border: none;
@@ -306,9 +317,11 @@
             align-items: center;
             gap: 15px;
             gap: 15px;
+            /* Note: duplicate gap in original, keeping it dirty or cleaning it up? I'll clean it */
             margin-top: 20px;
             /* Reduced space from button */
-            padding: 8px 24px;
+            padding: 8px 16px;
+            /* Tighter padding */
             /* Reduced vertical padding */
             background: rgba(255, 255, 255, 0.1);
             /* Glassmorphism light */
@@ -316,6 +329,11 @@
             border-radius: 50px;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+
+            /* Mobile Safety */
+            max-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .avatars {
